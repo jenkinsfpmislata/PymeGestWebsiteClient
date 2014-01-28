@@ -1,0 +1,390 @@
+<!--Project: PymeGestApplicationServer
+ * Package: com.pymegest.persistence.dao
+ * File: GenericDAO.java
+ * Date: 13-dic-2013
+ * Encoding: UTF-8
+ * License: GPL 3.0
+ *
+ * Copyright(c) PymeGest 2013
+ * www.pymegest.com
+ * admin@pymegest.com
+ *
+ * This file is part of Pymegest.
+ * Pymegest is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * any later version.
+ *
+ * Pymegest is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Pymegest. If not, see <http://www.gnu.org/licenses/>. -->
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
+        <title>PYMEGEST: Tienda</title>
+        <link rel="shortcut icon" type="image/x-icon" href="css/images/favicon.ico" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+        <link href='http://fonts.googleapis.com/css?family=Coda' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Jura:400,500,600,300' rel='stylesheet' type='text/css' />
+
+        <script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
+        <script src="js/jquery.touchwipe.1.1.1.js" type="text/javascript"></script>
+        <script src="js/jquery.carouFredSel-5.5.0-packed.js" type="text/javascript"></script>
+        <!--[if lt IE 9]>
+                <script src="js/modernizr.custom.js"></script>
+        <![endif]-->
+        <script src="js/functions.js" type="text/javascript"></script>
+
+
+    </head>
+    <body>
+        <!-- wrapper -->
+        <div class="wrapper">
+            <!-- header -->
+            <header class="header">
+                <div class="shell">
+                    <div class="header-top">
+                        <h1 id="logo"><a style="margin-top: -10px;" href="#"></a></h1>
+                        <nav id="navigation">
+                            <a href="#" class="nav-btn">Home<span></span></a>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li class="active home"><a href="tiendaV2.html">Tienda</a></li>
+                                <li><a href="producto.html">Producto</a></li>
+                                <li><a href="login.html">Login</a></li>
+                                <li><a href="contacto.html">Contacto</a></li>
+                            </ul>
+                        </nav>
+                        <div class="cl">&nbsp;</div>
+                    </div>
+                </div>
+            </header>
+            <!-- end of header -->
+            <!-- shell -->
+            <div class="shell">
+                <!-- main -->
+                <div class="main">
+                    <!-- cols -->
+                    <section class="cols">
+
+                        <h2 id="centrados">Estos son nuestros productos</h2>
+
+                    </section>
+                    <section class="cols">
+
+                        <div class="generalContenedorTienda">
+
+                            <div class="tiposContenedorSup">
+
+                                <div class="tiposContenedor">
+                                    <div class="contenedorCeldaCabecera">
+
+                                        FREE
+
+                                    </div>
+                                    <div class="contenedorCeldaRaya"></div>
+                                    <div class="contenedorCeldaPrecio">
+
+                                        0€
+
+
+                                    </div>
+
+                                    <div class="contenedorCelda" id="celda1">
+                                        <!--<button id="mostrar" onclick="document.getElementById('free1').style.visibility='visible'">Mostrar</button>
+                                        <button id="ocultar" onclick="document.getElementById('free1').style.visibility='hidden'">Ocultar</button>      -->
+                                        Periodo de prueba de 30 d&#237;as 
+
+                                        <div class="botonMasMenos">
+                                            <a href="" onclick="mostrar(this, 'free1', 'celda1');
+                                                    return false;" >[+]</a>
+                                        </div>
+                                        <div id="free1" class="oculto"> Empieza a utilizar las ventajas de Pymegest hoy mismo de forma gratuita.</div>
+                                    </div>
+
+                                    <div class="contenedorCelda" id="celda2">
+
+                                        Un solo usuario 
+
+                                        <div class="botonMasMenos">
+                                            <a href="" onclick="mostrar(this, 'free2', 'celda2');
+                                                    return false;" >[+]</a>
+                                        </div>
+                                        <div id="free2" class="oculto"> Pruebe usted mismo el potencial de gesti&#243;n de Pymegest.</div>
+                                    </div>
+
+                                    <div class="contenedorCelda" id="celda3">
+
+                                        Configuraci&#243;n Basica
+
+                                        <div class="botonMasMenos">
+                                            <a href="" onclick="mostrar(this, 'free3', 'celda3');
+                                                    return false;" >[+]</a>
+                                        </div>
+                                        <div id="free3" class="oculto"> Disponible las configuraciones necesarias para un buen uso.</div>
+                                    </div>
+
+                                    <div class="contenedorCelda" id="celda4">
+
+                                        Backups autom&#225;ticas 
+
+                                        <div class="botonMasMenos">
+                                            <a href="" onclick="mostrar(this, 'free4', 'celda4');
+                                                    return false;" >[+]</a>
+                                        </div>
+                                        <div id="free4" class="oculto"> Pymegest guardara todos sus datos durante el per&#237;odo de prueba.</div>
+                                    </div>
+                                    <div class="contenedorCelda" id="celda5">
+
+                                        Asistencia t&#233;cnica
+
+                                        <div class="botonMasMenos">
+                                            <a href="" onclick="mostrar(this, 'free5', 'celda5');
+                                                    return false;" >[+]</a>
+                                        </div>
+                                        <div id="free5" class="oculto"> Pymegest ofrece una asistencia personal y dedicada a todos sus clientes.</div>
+                                    </div>
+
+
+                                    <div class="contenedorCeldaComprar">
+                                        <a href="#" class="green-btn">Comprar</a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div class="tiposContenedorSup">
+
+                                <div class="tiposContenedor">
+                                    <div class="contenedorCeldaCabecera">
+
+                                        PROFESIONAL
+
+                                    </div>
+                                    <div class="contenedorCeldaRaya"></div>
+                                    <div class="contenedorCeldaPrecio">
+
+                                        9,90€
+
+
+                                    </div>
+                                    <div class="contenedorCelda" id="celdaPro1">
+
+                                        Licencia 1 año
+                                        <div class="botonMasMenos">
+                                            <a href="" onclick="mostrarV2(this, 'pro1', 'celdaPro1', 'pro1img');
+                                                    return false;" ><img src="css/images/boton_mas.jpg" alt="boton_mas" id="pro1img" /></a>
+                                        </div>
+                                        <div id="pro1" class="oculto"> La licencia de uso expira en 1 año desde la fecha de adquisici&#243;n.</div>
+
+                                    </div>
+
+                                    <div class="contenedorCelda" id="celdaPro2">
+
+                                        Hasta 10 usuarios
+                                        <div class="botonMasMenos">
+                                            <a href="" onclick="mostrarV2(this, 'pro2', 'celdaPro2', 'pro2img');
+                                                    return false;" ><img src="css/images/boton_mas.jpg" alt="boton_mas" id="pro2img" /></a>
+                                        </div>
+                                        <div id="pro2" class="oculto"> Crea hasta 10 usuarios diferentes para usar la aplicaci&#243;n.</div>
+
+                                    </div>
+
+                                    <div class="contenedorCelda" id="celdaPro3">
+
+                                        Configuraci&#243;n personalizada
+                                        <div class="botonMasMenos">
+                                            <a href="" onclick="mostrarV2(this, 'pro3', 'celdaPro3', 'pro3img');
+                                                    return false;" ><img src="css/images/boton_mas.jpg" alt="boton_mas" id="pro3img" /></a>
+                                        </div>
+                                        <div id="pro3" class="oculto"> Puede personalizar algunos parametros a su gusto y comodidad.</div>
+
+                                    </div>
+                                    <div class="contenedorCelda" id="celdaPro4">
+
+                                        Backups manuales 
+                                        <div class="botonMasMenos">
+                                            <a href="" onclick="mostrarV2(this, 'pro4', 'celdaPro4', 'pro4img');
+                                                    return false;" ><img src="css/images/boton_mas.jpg" alt="boton_mas" id="pro4img" /></a>
+                                        </div>
+                                        <div id="pro4" class="oculto"> Puede realizar copias de sus datos cuando quiera a parte de disponer de las copias automatizadas por Pymegest.</div>
+
+                                    </div>
+                                    <div class="contenedorCelda" id="celdaPro5">
+
+                                        Asistencia técnica
+                                        <div class="botonMasMenos">
+                                            <a href="" onclick="mostrarV2(this, 'pro5', 'celdaPro5', 'pro5img');
+                                                    return false;" ><img src="css/images/boton_mas.jpg" alt="boton_mas" id="pro5img" /></a>
+                                        </div>
+                                        <div id="pro5" class="oculto"> Pymegest ofrece una asistencia personal y dedicada a todos sus clientes.</div>
+
+
+                                    </div>
+
+
+                                    <div class="contenedorCeldaComprar">
+                                        <a href="#" class="green-btn">Comprar</a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+                            <div class="tiposContenedorSup">
+
+                                <div class="tiposContenedor">
+
+                                    <div class="contenedorCeldaCabecera">
+
+                                        PREMIUM
+
+                                    </div>
+                                    <div class="contenedorCeldaRaya"></div>
+                                    <div class="contenedorCeldaPrecio">
+
+                                        14,90€
+
+
+                                    </div>
+
+                                    <div class="contenedorCelda">
+
+                                        Licencia 1 año
+
+
+                                    </div>
+
+                                    <div class="contenedorCelda">
+
+                                        Hasta 30 usuarios
+
+
+                                    </div>
+
+                                    <div class="contenedorCelda">
+
+                                        Configuraci&#243;n y estad&#237;sticas
+
+
+                                    </div>
+                                    <div class="contenedorCelda">
+
+                                        Backups automaticas y manuales 
+
+
+                                    </div>
+                                    <div class="contenedorCelda">
+
+                                        Asistencia t&#233;cnica
+
+
+                                    </div>
+
+
+                                    <div class="contenedorCeldaComprar">
+                                        <a href="#" class="green-btn">Comprar</a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </section>
+                    <!-- end of cols -->
+                    
+                    <div class="socials">
+                        <p>Siguenos en las redes sociales y enterate de las &#250;ltimas noticias y actulizaciones de Pymegest Soft</p>
+
+                        <ul>
+                            <li><a href="#" class="facebook-ico">facebook-ico</a></li>
+                            <li><a href="#" class="twitter-ico">twitter-ico</a></li>
+                            <li><a href="#" class="skype-ico">skype-ico</a></li>
+                            <li><a href="#" class="rss-ico">rss-ico</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end of main -->
+            </div>
+            <!-- end of shell -->	
+            <!-- footer -->
+            <div id="footer">
+                <!-- shell -->
+                <div class="shell">
+                    <!-- footer-cols -->
+                    <div class="footer-cols">
+                        <div class="col">
+                            <h2>SERVICIOS</h2>
+                            <ul>
+                                <li><a href="#">Nullam euismod quam vel</a></li>
+                                <li><a href="#">Quisque nec lacuss volutpat</a></li>
+                                <li><a href="#">Aenean bibendum lacus varius </a></li>
+                                <li><a href="#">Pellentesque sed nulla nec </a></li>
+                                <li><a href="#">Donec a velit nisi, ac dignissim</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col">
+                            <h2>SOLUCIONES</h2>
+                            <ul>
+                                <li><a href="#">Quisque nec lacuss volutpat</a></li>
+                                <li><a href="#">Aenean bibendum lacus varius </a></li>
+                                <li><a href="#">Nullam euismod quam vel</a></li>
+                                <li><a href="#">Pellentesque sed nulla nec </a></li>
+                                <li><a href="#">Donec a velit nisi, ac dignissim </a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col">
+                            <h2>BLOG</h2>
+                            <ul>
+                                <li><a href="#">Quisque nec lacuss volutpat</a></li>
+                                <li><a href="#">Aenean bibendum lacus varius </a></li>
+                                <li><a href="#">Nullam euismod quam vel</a></li>
+                                <li><a href="#">Pellentesque sed nulla nec </a></li>
+                                <li><a href="#">Donec a velit nisi, ac dignissim </a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col">
+                            <h2>CONCTACTO</h2>
+
+                            <p>Email: <a href="#">info@pymegest.com</a></p>
+                            <p>Telefono: 000-000-000</p>
+                            <p>Direccion: C/.Dolores Ibarruri, 32 CP 46920 MISLATA (Valencia) </p>
+                        </div>
+                        <div class="cl">&nbsp;</div>
+                    </div>
+                    <!-- end of footer-cols -->
+                    <div class="footer-bottom">
+                        <div class="footer-nav">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="tiendaV2.html">Tienda</a></li>
+                                <li><a href="producto.html">Producto</a></li>
+                                <li><a href="login.html">Login</a></li>
+                                <li><a href="contacto.html">Contacto</a></li>
+                            </ul>
+                        </div>
+                        <p class="copy">Copyright &copy; 2013<span>|</span>Design by: <a href="http://www.pymegest.com" target="_blank">www.pymegest.com</a></p>
+                        <div class="cl">&nbsp;</div>
+                    </div>
+                </div>
+                <!-- end of shell -->
+            </div>
+            <!-- footer -->
+        </div>
+        <!-- end of wrapper -->
+    </body>
+</html>

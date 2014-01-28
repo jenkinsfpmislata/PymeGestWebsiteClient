@@ -22,7 +22,7 @@ $(function() {
 	var current = {
 		imgFront	: 649,
 		imgMid		: 572,
-		imgBack		: 498,
+		imgBack		: 467,
 		h3			: 32,
 		h5			: 32,
 		p			: 32,
@@ -69,7 +69,7 @@ $(function() {
 			current = {
 				imgFront	: 649,
 				imgMid		: 572,
-				imgBack		: 498,
+				imgBack		: 467,
 				h3			: 32,
 				h5			: 32,
 				p			: 32,
@@ -448,3 +448,47 @@ $(function() {
 		});
 	}
 });
+
+// FUNCIONES DE TIENDA //
+
+function mostrar(enlace, etiqueta, nomCelda) {
+
+    celda = document.getElementById(nomCelda);
+    celda.style.height = (celda.style.height === '150px') ? '50px' : '150px';
+    obj = document.getElementById(etiqueta);
+    obj.style.display = (obj.style.display === 'block') ? 'none' : 'block';
+    setTimeout(function() {
+
+        obj.style.visibility = (obj.style.visibility === 'visible') ? 'hidden' : 'visible';
+
+    }, 500);
+
+    enlace.innerHTML = (enlace.innerHTML === '&nbsp;[-]') ? '[+]' : '&nbsp;[-]';
+}
+
+function mostrarV2(enlace, etiqueta, nomCelda,nomImg) {
+
+    celda = document.getElementById(nomCelda);
+    celda.style.height = (celda.style.height === '150px') ? '50px' : '150px';
+    obj = document.getElementById(etiqueta);
+    obj.style.display = (obj.style.display === 'block') ? 'none' : 'block';
+    setTimeout(function() {
+
+        obj.style.visibility = (obj.style.visibility === 'visible') ? 'hidden' : 'visible';
+
+    }, 500);
+   
+    img = document.getElementById(nomImg);
+    simboloActual=img.getAttribute('src');
+    
+    mas = 'css/images/boton_mas.jpg';
+    menos = 'css/images/boton_menos.jpg';
+    
+    if(simboloActual === mas){
+         enlace.innerHTML = '<img id='+nomImg+' src='+menos+' />';
+    }else if(simboloActual === menos){       
+        enlace.innerHTML = '<img id='+nomImg+' src='+mas+'  />';
+    }
+    
+    //enlace.innerHTML = (enlace.innerHTML === '<img id="pro1img" src='+menos+' alt="boton_menos" />') ? '<img id="pro1img" src='+mas+' alt="boton_mas" />' : '<img id="pro1img" src='+menos+' alt="boton_menos" />';
+}

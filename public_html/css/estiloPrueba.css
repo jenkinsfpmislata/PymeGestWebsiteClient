@@ -1,0 +1,54 @@
+/* 
+    Document   : estiloPrueba
+    Created on : 24-ene-2014, 12:03:35
+    Author     : Miki
+    Description:
+        Purpose of the stylesheet follows.
+*/
+/*
+        MODIFICACIONES DE LA CABECERA!!!
+*/
+html,body {
+    height:100%;
+}
+
+#contenedor {
+    min-height: 100%;
+}
+
+#cabecera{
+
+    height: 90px;
+    border: 2px solid red;
+}
+
+#logo{
+
+    width: 384px;
+    height: 86px;
+    border: 2px solid blue;
+    float: left;
+}
+
+#navegador{
+
+    border: 2px solid green;
+    height: 86px;
+    margin-left: 388px;
+}
+
+/*
+        MODIFICACIONES DEL MAIN!!!
+*/
+/*
+        MODIFICACIONES DEL PIE!!!
+*/
+
+#pie {
+    
+    position:relative;
+    height:40px;
+    margin-top:-40px;
+    border: 1px solid gold;
+}
+

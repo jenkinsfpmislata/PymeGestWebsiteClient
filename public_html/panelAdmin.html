@@ -1,0 +1,315 @@
+<!--Project: Expression project.name is undefined on line 1, column 16 in Templates/JSP_Servlet/PymeGestSoftHTML.html.
+ * File: panelAdmin.html
+ * Date: 27-ene-2014
+ * Encoding: UTF-8
+ * License: default
+ *
+ * Copyright(c) PymeGest 2013
+ * www.pymegest.com
+ * admin@pymegest.com
+ *
+ * This file is part of Pymegest.
+ * Pymegest is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * any later version.
+ *
+ * Pymegest is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Pymegest. If not, see <http://www.gnu.org/licenses/>. -->
+<!--
+ * @author PymeGestSoft
+ * @version 1.0
+ * @since 1.0
+ */-->
+
+<!--Project: PymeGestApplicationServer
+ * Package: com.pymegest.persistence.dao
+ * File: GenericDAO.java
+ * Date: 13-dic-2013
+ * Encoding: UTF-8
+ * License: GPL 3.0
+ *
+ * Copyright(c) PymeGest 2013
+ * www.pymegest.com
+ * admin@pymegest.com
+ *
+ * This file is part of Pymegest.
+ * Pymegest is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * any later version.
+ *
+ * Pymegest is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Pymegest. If not, see <http://www.gnu.org/licenses/>. -->
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
+        <title>PYMEGEST: Producto</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all" />
+        <link href='http://fonts.googleapis.com/css?family=Coda' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Jura:400,500,600,300' rel='stylesheet' type='text/css' />
+
+        <script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
+        <script src="js/jquery.touchwipe.1.1.1.js" type="text/javascript"></script>
+        <script src="js/jquery.carouFredSel-5.5.0-packed.js" type="text/javascript"></script>
+        <script src="js/bootstrap.js" type="text/javascript"></script>
+        <!--[if lt IE 9]>
+                <script src="js/modernizr.custom.js"></script>
+        <![endif]-->
+        <script src="js/functions.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <!-- wrapper -->
+        <div class="wrapper">
+            <!-- header -->
+            <header class="header">
+                <div class="shell">
+                    <div class="header-top">
+                        <h1 id="logo"><a href="#"></a></h1>
+                        <nav id="navigation">
+                            <a href="#" class="nav-btn">Home<span></span></a>
+                            <ul>
+                                <li class="active home"><a href="index.html">Home</a></li>
+                                <li><a href="tiendaV2.html">Tienda</a></li>
+                                <li><a href="producto.html">Producto</a></li>
+                                <li><a href="panelAdmin.html">Login</a></li>
+                                <li><a href="contacto.html">Contacto</a></li>
+                            </ul>
+                        </nav>
+                        <div class="cl">&nbsp;</div>
+                    </div>
+                </div>
+            </header>
+            <!-- end of header -->
+            <!-- shell -->
+            <div class="shell">
+                <!-- main -->
+                <div class="main">
+                    <!-- cols -->
+                    <!-- end of cols -->
+                    <div id="inf_user" class="container-fluid">
+                        <div class="row-fluid">
+                            <div class="span3">
+                                <img id="img_user" class="img-circle" src="css/images/sombraCara.jpg" />
+                                <h4>Administrador</h4>
+                                <button class="btn btn-primary"><i class="icon-envelope"></i></button>
+                                <button class="btn btn-danger"><i class="icon-off"></i></button>
+                            </div>
+                            <div class="span9">
+                                <h2 id="centrados_admin">Panel de administración</h2>
+                                <img id="img-cabecera" src="css/images/logo_herramienta.png"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="posicion_tabla" class="container-fluid">
+                        <div class="row-fluid">
+                            <div class="span2">
+                                <ul class="nav nav-tabs nav-stacked">
+                                    <li class="active">
+                                        <a href="#">Usuarios <i class="icon-user"></i></a>
+                                    </li>
+                                    <li><a href="#">Productos <i class="icon-inbox"></i></a></li>
+                                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                            Herramientas <i class="icon-wrench"></i>
+                                            <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Copiar</a></li>
+                                            <li><a href="#">Convertir a PDF</a></li>
+                                            <li><a href="#">Convertir a Excel</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="span10">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Correo electrónico</th>
+                                        <th>Provincia</th>
+                                        <th>Provincia</th>
+                                        <th>Edad</th>
+                                        <th id="tabla_admin_botones">Edición</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Miguel María</td>
+                                        <td>Martínez Echeverría</td>
+                                        <td>mimarec89@gmail.com</td>
+                                        <td>Valencia</td>
+                                        <td>Valencia</td>
+                                        <td>1</td>
+                                        <td>
+                                            <button class="btn btn-success botones_admin" data-toggle="modal" data-target="#myModal"><i class="icon-eye-open"></i></button>
+                                            <button class="btn btn-primary"><i class="icon-pencil"></i></button>
+                                            <button class="btn btn-danger"><i class="icon-trash "></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Rafael</td>
+                                        <td>Hernandez Novillo</td>
+                                        <td>tecnopodo@gmail.com</td>
+                                        <td>Salamanca</td>
+                                        <td>Valencia</td>
+                                        <td>100</td>
+                                        <td>
+                                            <button class="btn btn-success botones_admin" data-toggle="modal" data-target="#myModal"><i class="icon-eye-open"></i></button>
+                                            <button class="btn btn-primary"><i class="icon-pencil"></i></button>
+                                            <button class="btn btn-danger"><i class="icon-trash "></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Ruben</td>
+                                        <td>Coll Tovar</td>
+                                        <td>rubenColl@gmail.com</td>
+                                        <td>Albuquerque</td>
+                                        <td>Valencia</td>
+                                        <td>20</td>
+                                        <td>
+                                            <button class="btn btn-success botones_admin" data-toggle="modal" data-target="#myModal"><i class="icon-eye-open"></i></button>
+                                            <button class="btn btn-primary"><i class="icon-pencil"></i></button>
+                                            <button class="btn btn-danger"><i class="icon-trash "></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Jaime</td>
+                                        <td>Lopez Lopez</td>
+                                        <td>jalolo@gmail.com</td>
+                                        <td>Madrid</td>
+                                        <td>Valencia</td>
+                                        <td>15</td>
+                                        <td>
+                                            <button class="btn btn-success botones_admin" data-toggle="modal" data-target="#myModal"><i class="icon-eye-open"></i></button>
+                                            <button class="btn btn-primary"><i class="icon-pencil"></i></button>
+                                            <button class="btn btn-danger"><i class="icon-trash "></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Juan</td>
+                                        <td>Martínez Saez</td>
+                                        <td>juamasa@gmail.com</td>
+                                        <td>Cuenca</td>
+                                        <td>Valencia</td>
+                                        <td>2</td>
+                                        <td>
+                                            <button class="btn btn-success botones_admin" data-toggle="modal" data-target="#myModal"><i class="icon-eye-open"></i></button>
+                                            <button class="btn btn-primary"><i class="icon-pencil"></i></button>
+                                            <button class="btn btn-danger"><i class="icon-trash "></i></button>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- MODAL
+                                DE
+                                BOOTSTRAP PARA VER USUARIO-->
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form class="form-horizontal">
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="inputName">Nombre</label>
+                                                        <div class="controls">
+                                                            <input type="text" id="inputName" placeholder="Nombre...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="inputSecondName">Apellidos</label>
+                                                        <div class="controls">
+                                                            <input type="text" id="inputSecondName" placeholder="Apellidos...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="inputEmail">Email</label>
+                                                        <div class="controls">
+                                                            <input type="text" id="inputEmail" placeholder="Email...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="inputVia">Via</label>
+                                                        <div class="controls">
+                                                            <select>
+                                                                <option>Calle</option>
+                                                                <option>Plaza</option>
+                                                                <option>Avenida</option>
+                                                                <option>Callejon</option>
+                                                                <option>Via</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="inputDireccion">Dirección</label>
+                                                        <div class="controls">
+                                                            <input type="text" id="inputDireccion" placeholder="Dirección...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="inputDate">Fecha Nacimiento</label>
+                                                        <div class="controls">
+                                                            <input type="text" id="inputDate" placeholder="Fecha Nacimiento...">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                                <button type="button" class="btn btn-primary">Guardar</button>
+                                            </div>
+                                        </div><!-- /.modal-content -->
+                                    </div><!-- /.modal-dialog -->
+                                </div><!-- /.modal -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of main -->
+            </div>
+            <!-- end of table -->	
+            <!-- footer -->
+            <div id="footer">
+                <!-- shell -->
+                <div class="shell">
+                    <div class="footer-bottom">
+                        <div class="footer-nav">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="tiendaV2.html">Tienda</a></li>
+                                <li><a href="producto.html">Producto</a></li>
+                                <li><a href="panelAdmin.html">Login</a></li>
+                                <li><a href="contacto.html">Contacto</a></li>
+                            </ul>
+                        </div>
+                        <p class="copy">Copyright &copy; 2013<span>|</span>Design by: <a href="http://www.pymegest.com" target="_blank">www.pymegest.com</a></p>
+                        <div class="cl">&nbsp;</div>
+                    </div>
+                </div>
+                <!-- end of shell -->
+            </div>
+            <!-- footer -->
+        </div>
+        <!-- end of wrapper -->
+    </body>
+</html>

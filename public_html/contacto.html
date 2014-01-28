@@ -1,0 +1,240 @@
+<!--Project: PymeGestApplicationServer
+ * Package: com.pymegest.persistence.dao
+ * File: GenericDAO.java
+ * Date: 13-dic-2013
+ * Encoding: UTF-8
+ * License: GPL 3.0
+ *
+ * Copyright(c) PymeGest 2013
+ * www.pymegest.com
+ * admin@pymegest.com
+ *
+ * This file is part of Pymegest.
+ * Pymegest is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * any later version.
+ *
+ * Pymegest is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Pymegest. If not, see <http://www.gnu.org/licenses/>. -->
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
+        <title>PYMEGEST: Contacto</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all" />
+        <link href='http://fonts.googleapis.com/css?family=Coda' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Jura:400,500,600,300' rel='stylesheet' type='text/css' />
+
+        <script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
+        <script src="js/jquery.touchwipe.1.1.1.js" type="text/javascript"></script>
+        <script src="js/jquery.carouFredSel-5.5.0-packed.js" type="text/javascript"></script>
+        <!--[if lt IE 9]>
+                <script src="js/modernizr.custom.js"></script>
+        <![endif]-->
+        <script src="js/functions.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <!-- header -->
+        <div>
+            <header class="header">
+                <div class="shell">
+                    <div class="header-top">
+                        <h1 id="logo"><a href="#"></a></h1>
+                        <nav id="navigation">
+                            <a href="#" class="nav-btn">Home<span></span></a>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="tiendaV2.html">Tienda</a></li>
+                                <li><a href="producto.html">Producto</a></li>
+                                <li><a href="login.html">Login</a></li>
+                                <li class="active home"><a href="contacto.html">Contacto</a></li>
+                            </ul>
+                        </nav>
+                        <div class="cl">&nbsp;</div>
+                    </div>
+                </div>
+            </header>
+            <!-- end of header -->
+            <!-- shell -->
+            <div class="shell">
+                <!-- main -->
+                <div class="main">
+                    <!-- cols -->
+                    <section class="cols">
+                        <h2 id="centrados">Contactac con PymeGest</h2>
+                    </section>
+
+                    <section class="cols">
+
+                        <div id="contacto">
+                            <div class="col-cnt">
+                                <h2>PymeGest Online Store</h2>
+                                <p>Entra en el PymeGest para adquirir equipos y programas de PymeGest.
+                                    Atención telef&#243;nica de lunes a viernes, de 10:00 a 20:00.</p>
+                            </div>
+                        </div>
+
+                        <div id="contacto">
+                            <div class="col-cnt">
+                                <h2>Soporte t&#233;cnico para productos</h2>
+                                <p>Consulta la p&#225;gina de Soporte de PymeGest para encontrar respuestas r&#225;pidas, manuales y art&#237;culos t&#233;cnicos.
+                                    Intercambia trucos y consejos con otros usuarios en los Foros de discusi&#243;n PymeGest.</p>
+                            </div>
+                        </div>
+
+                        <div id="contacto">
+                            <div class="col-cnt">
+                                <h2>Compras para empresas</h2>
+                                <p>Si tienes una empresa ya seas PYME o aut&#243;nomo, visita el PymeGest Online Store
+                                    o llama al 000 000 000. El horario de atenci&#243;n es de lunes a viernes, de 09:00 a 18:00. 
+                                    PymeGest Online Store ofrece una gran variedad de servicios de negocio y formas de pago.</p>
+                            </div>
+                        </div>
+
+                        <div id="contacto" style="height:176px;">
+                            <div class="col-cnt">
+                                <h2>Marketing y Comunicaci&#243;n</h2>
+                                <p>Solicita autorizaci&#243;n para utilizar una marca comercial o una imagen de producto de PymeGest,
+                                    o bien presenta una solicitud de marketing o publicidad.</p>
+                            </div>
+                        </div>
+
+                        <div id="contacto">
+                            <div class="col-cnt">
+                                <h2>Contacta con nosotros</h2>
+                                <form action="">
+                                    <label for="nombre">Nombre</label>
+
+                                    <div class="controls">
+                                        <input type="text" size="30" maxlength="50" id="name" placeholder="Nombre"> *
+                                    </div>
+
+                                    <label for="email">E-mail</label>
+                                    <div class="controls">
+                                        <input type="text" size="30" maxlength="50" id="email" placeholder="e-mail"> *
+                                    </div>
+
+                                    <label for="website">Página Web</label>
+                                    <div class="controls">
+                                        <input type="text" size="30" maxlength="50" id="website" placeholder="Página Web">
+                                    </div>
+
+                                    <label for="comentario">Comentario</label>
+                                    <div class="controls">
+                                        <textarea  id="comment" rows="5" cols="500" placeholder="Escribe aqui un comentario..." style="width:420px;"></textarea>
+                                    </div>
+
+                                    <button type="submit" class="btn" >Submit</button>
+                                    <button type="reset" class="btn" >Reset</button>
+
+                                </form>
+                            </div>
+                        </div>
+
+                        <div id="contacto" style="height:176px;">
+                            <div class="col-cnt">
+                                <h2>Mapa</h2>
+                                <iframe width="430" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.es/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Silicon+Valley,+Condado+de+Santa+Clara,+California,+Estados+Unidos&amp;aq=1&amp;oq=Sil&amp;sll=39.316265,-0.418859&amp;sspn=4.750517,9.876709&amp;ie=UTF8&amp;hq=&amp;hnear=Silicon+Valley,+Condado+de+Santa+Clara,+California,+Estados+Unidos&amp;t=m&amp;ll=37.402483,-122.035532&amp;spn=0.023864,0.036907&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+                                <br />
+                                <small>
+                                    <a href="https://maps.google.es/maps?f=q&amp;source=embed&amp;hl=es&amp;geocode=&amp;q=Silicon+Valley,+Condado+de+Santa+Clara,+California,+Estados+Unidos&amp;aq=1&amp;oq=Sil&amp;sll=39.316265,-0.418859&amp;sspn=4.750517,9.876709&amp;ie=UTF8&amp;hq=&amp;hnear=Silicon+Valley,+Condado+de+Santa+Clara,+California,+Estados+Unidos&amp;t=m&amp;ll=37.402483,-122.035532&amp;spn=0.023864,0.036907&amp;z=14&amp;iwloc=A" style="color:#0000FF;text-align:left">Ver mapa más grande</a>
+                                </small>
+                            </div>
+                        </div>
+
+                        <div class="cl">&nbsp;</div>
+
+                    </section>
+                    <!-- end of cols -->
+                    <div class="socials">
+                        <p>Siguenos en las redes sociales y enterate de las &#250;ltimas noticias y actulizaciones de Pymegest Soft</p>
+
+                        <ul>
+                            <li><a href="#" class="facebook-ico">facebook-ico</a></li>
+                            <li><a href="#" class="twitter-ico">twitter-ico</a></li>
+                            <li><a href="#" class="skype-ico">skype-ico</a></li>
+                            <li><a href="#" class="rss-ico">rss-ico</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end of main -->
+            </div>
+            <!-- end of shell -->	
+            <!-- footer -->
+            <div id="footer">
+                <!-- shell -->
+                <div class="shell">
+                    <!-- footer-cols -->
+                    <div class="footer-cols">
+                        <div class="col">
+                            <h2>SERVICIOS</h2>
+                            <ul>
+                                <li><a href="#">Nullam euismod quam vel</a></li>
+                                <li><a href="#">Quisque nec lacuss volutpat</a></li>
+                                <li><a href="#">Aenean bibendum lacus varius </a></li>
+                                <li><a href="#">Pellentesque sed nulla nec </a></li>
+                                <li><a href="#">Donec a velit nisi, ac dignissim</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col">
+                            <h2>SOLUCIONES</h2>
+                            <ul>
+                                <li><a href="#">Quisque nec lacuss volutpat</a></li>
+                                <li><a href="#">Aenean bibendum lacus varius </a></li>
+                                <li><a href="#">Nullam euismod quam vel</a></li>
+                                <li><a href="#">Pellentesque sed nulla nec </a></li>
+                                <li><a href="#">Donec a velit nisi, ac dignissim </a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col">
+                            <h2>BLOG</h2>
+                            <ul>
+                                <li><a href="#">Quisque nec lacuss volutpat</a></li>
+                                <li><a href="#">Aenean bibendum lacus varius </a></li>
+                                <li><a href="#">Nullam euismod quam vel</a></li>
+                                <li><a href="#">Pellentesque sed nulla nec </a></li>
+                                <li><a href="#">Donec a velit nisi, ac dignissim </a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col">
+                            <h2>CONCTACTO</h2>
+
+                            <p>Email: <a href="#">info@pymegest.com</a></p>
+                            <p>Telefono: 000-000-000</p>
+                            <p>Direccion: C/.Dolores Ibarruri, 32 CP 46920 MISLATA (Valencia) </p>
+                        </div>
+                        <div class="cl">&nbsp;</div>
+                    </div>
+                    <!-- end of footer-cols -->
+                    <div class="footer-bottom">
+                        <div class="footer-nav">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="tiendaV2.html">Tienda</a></li>
+                                <li><a href="producto.html">Producto</a></li>
+                                <li><a href="login.html">Login</a></li>
+                                <li><a href="contacto.html">Contacto</a></li>
+                            </ul>
+                        </div>
+                        <p class="copy">Copyright &copy; 2013<span>|</span>Design by: <a href="http://www.pymegest.com" target="_blank">www.pymegest.com</a></p>
+                        <div class="cl">&nbsp;</div>
+                    </div>
+                </div>
+                <!-- end of shell -->
+            </div>
+            <!-- end of footer -->
+        </div>
+    </body>
+</html>
