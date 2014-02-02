@@ -733,14 +733,15 @@ a:hover {
 #img-cabecera{
 
     height: 93px;
-    left: 483px;
+    left: 571px;
     position: relative;
-    top: -78px;
+    top: -79px;
     width: 93px;      
 }
 
 #centrados_admin{
     
+    left: -30px;
     position: relative;
     text-align: center;
     top: 7px;
@@ -781,4 +782,14 @@ a:hover {
     margin-right: 8px;
     margin-top: 9px;
     width: 80px;
+}
+
+.panelControlFilas{
+    
+    text-align:center;
+}
+
+td button{
+    margin-left:2px;
+    
 }

@@ -27,31 +27,6 @@
  * @since 1.0
  */-->
 
-<!--Project: PymeGestApplicationServer
- * Package: com.pymegest.persistence.dao
- * File: GenericDAO.java
- * Date: 13-dic-2013
- * Encoding: UTF-8
- * License: GPL 3.0
- *
- * Copyright(c) PymeGest 2013
- * www.pymegest.com
- * admin@pymegest.com
- *
- * This file is part of Pymegest.
- * Pymegest is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * any later version.
- *
- * Pymegest is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Pymegest. If not, see <http://www.gnu.org/licenses/>. -->
-
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -73,20 +48,12 @@
         <script src="js/functions.js" type="text/javascript"></script>
 
         <!-- Dynamic Table -->
-
-        <script type="text/javascript" src="js/DynamicTable.js" ></script>
-        
+        <script type="text/javascript" src="js/AdminPanel.js" ></script>      
         <script type="text/javascript" src="js/jsonify.js"></script>
-
         <script type="text/javascript">
-
             $(document).ready(function() {
-
-                readCategorias();
-
+                init();
             });
-
-
         </script>
 
     </head>
@@ -125,7 +92,7 @@
                                 <img id="img_user" class="img-circle" src="css/images/sombraCara.jpg" />
                                 <h4>Administrador</h4>
                                 <button class="btn btn-primary"><i class="icon-envelope"></i></button>
-                                <button class="btn btn-danger" onclick="window.location.href = 'login.html'"><i class="icon-off"></i></button>
+                                <button class="btn btn-danger" onclick="menu.selectCategory()"><i class="icon-off"></i></button>
                             </div>
                             <div class="span9">
                                 <h2 id="centrados_admin">Panel de administración</h2>
@@ -135,12 +102,9 @@
                     </div>
                     <div id="posicion_tabla" class="container-fluid">
                         <div class="row-fluid">
-                            <div class="span2">
-                                <ul class="nav nav-tabs nav-stacked" id="listaCategorias">
-
+                            <div class="span2" id="menuAJAX">
                                     <!--Se Imprime las categorias-->
 
-                                </ul>
                             </div>
                             
                             <!-- MODAL DE BOOTSTRAP PARA VER DATOS -->
