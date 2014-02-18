@@ -730,21 +730,19 @@ a:hover {
 
 /* ESTILOS PANEL DE ADMINISTRACION */
 
-#img-cabecera{
-
+#img-cabecera {
     height: 93px;
-    left: 571px;
+    left: 650px;
     position: relative;
-    top: -79px;
-    width: 93px;      
+    top: -133px;
+    width: 93px;
 }
 
-#centrados_admin{
-    
+#centrados_admin {
     left: -30px;
     position: relative;
     text-align: center;
-    top: 7px;
+    top: -50px;
 }
 
 #inf_user{
@@ -793,3 +791,148 @@ td button{
     margin-left:2px;
     
 }
+
+#tablaAJAX button, #inf_user button{
+    font-size: 10px;
+}
+
+.table-bordered th{
+    border-left: 1px solid #DDDDDD;
+    text-align: center;
+    height: 30px;
+    padding: 10px;
+}
+
+#tablaAJAX .form-control[disabled] {
+    background-color: white;
+}
+
+.table-controls{
+    width: 140px;
+}
+
+
+
+
+
+
+/* ESTILOS DE REGISTRARION */
+
+fieldset legend div .textoColumnDerecha{
+
+
+}
+
+
+#registrarionContainer{
+
+    width: 900px;
+    float: left; 
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.registrationControls span{
+    margin-left: 10px;
+    color: red;
+
+}
+.contentInput {
+    float:left;
+    margin: 15px;
+}
+
+.contentInput span{
+    clear:both;
+    float:right;
+    margin-left: 10px;
+    color: red;
+    text-align:right;
+}
+
+
+/* FIN ESTILOS DE REGISTRARION */
+
+/* ESTILOS DE PURCHASE */
+
+.textoColumnDerecha{
+    margin-top: 5px;
+
+}
+
+.textoColumnDerechaInput{
+    margin-top: 2px;
+    margin-left: 180px;
+
+}
+
+.textoProducto{
+    color:black;
+    font-weight:bolder; 
+}
+
+
+
+
+
+
+
+/* FIN ESTILOS DE PURCHASE */
+
+/* ESTILOS DE PRODUCTO */
+
+.textoCentrado{
+
+    text-align:center;
+
+}
+
+.textoCentrado img{
+    margin-left: 95px;
+    text-align:right;
+    max-width: 20px; 
+    max-height: 20px;
+}
+
+.cabeceraColumna{
+    border-right:1px solid black;  
+    width: 100px;
+    height: 100px;
+    padding: 1px !important;
+    padding-top:10px !important;
+    background: url(images/footer.png) repeat;
+    color:white !important;
+}
+.cabeceraColumnaFirst{
+    border-right:1px solid black;
+    width: 200px;
+    height: 100px;
+
+}
+.contenedorComprar{
+    margin-top:20px;
+    width: 100%;
+    height: 80px;
+    text-decoration: none !important;
+    padding-left:15px;
+}
+
+
+.tituloProducto{
+    width: 100%;
+    height: 30px;
+    text-align: center !important;
+    font-size: 20px;
+    /*color:black;*/
+    font-weight: bolder;
+    
+}
+.precioProducto{
+    width: 100%;
+    height: 50px;
+    font-size: 50px;
+    color:blue;
+    margin-top:10px;
+}
+
+/* FIN ESTILOS DE PRODUCTO */

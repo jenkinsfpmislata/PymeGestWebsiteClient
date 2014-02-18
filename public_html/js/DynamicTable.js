@@ -8,7 +8,7 @@ function readCategorias() {
 
     $.ajax({
         dataType: 'json',
-        url: 'http://localhost/PymeGestWebsiteServer/web/app.php/categoria/',
+        url: 'http://localhost/PymeGestWebSiteServer/web/app_dev.php/categoria/',
         type: 'GET',
         success: function(data) {
             categorias = data;
@@ -30,19 +30,6 @@ var findCategoria = function(nombreCategoria) {
     categorias.forEach(function(element) {
 
         if (element.nombre == nombreCategoria) {
-            categoria = element;
-        }
-
-    });
-    return categoria;
-};
-
-var findCategoriaUrl = function(urlCategoria) {
-
-    var categoria = {};
-    categorias.forEach(function(element) {
-
-        if (element.url == urlCategoria) {
             categoria = element;
         }
 
@@ -75,7 +62,7 @@ function readAllData(nombreCategoria) {
 
     $.ajax({
         dataType: 'json',
-        url: '../../PymeGestWebsiteServer/web/app.php' + categoria.url,
+        url: 'http://localhost/PymeGestWebSiteServer/web/app_dev.php' + categoria.url,
         type: 'GET',
         success: function(data) {
             items = data;
@@ -118,19 +105,17 @@ function insertData(categoria) {
     
     var dataForm = JSON.stringify($('#formularioModal').jsonify());
 
-    //alert(dataForm);
+    alert(dataForm);
 
     $.ajax({
         dataType: 'json',
-        url: '../../PymeGestWebsiteServer/web/app.php' + categoria,
+        url: 'http://localhost/PymeGestWebSiteServer/web/app_dev.php' + categoria,
         type: 'POST',
         data: dataForm,
         success: function(data) {
 
-            var item = findCategoriaUrl(categoria);
+            window.location = 'panelAdmin.html';
 
-            readAllData(item.nombre);
-                 
         }
     });
 
@@ -143,7 +128,7 @@ function deleteData(categoria, id) {
 
         $.ajax({
             dataType: 'json',
-            url: '../../PymeGestWebsiteServer/web/app.php' + categoria + id,
+            url: 'http://localhost/PymeGestWebSiteServer/web/app_dev.php' + categoria + id,
             type: 'DELETE',
             success: function(data) {
 
@@ -192,18 +177,17 @@ function updateDataBD(categoria) {
 
     var dataForm = JSON.stringify($('#formularioModal').jsonify());
 
-   // alert(dataForm);
+    //alert(dataForm);
 
     $.ajax({
         dataType: 'json',
-        url: '../../PymeGestWebsiteServer/web/app.php' + categoria,
+        url: 'http://localhost/PymeGestWebSiteServer/web/app_dev.php' + categoria,
         type: 'PUT',
         data: dataForm,
         success: function(data) {
-       
-            var item = findCategoriaUrl(categoria);
 
-            readAllData(item.nombre);
+            //$('#myModal').modal('hide');
+            window.location = 'panelAdmin.html';
         }
     });
 }
@@ -223,7 +207,7 @@ function mostrarModal(categoria, item, disabled) {
         titulo = 'Datos del rol ' + item.rol.toUpperCase();
     } else if (categoria == '/contratacion/') {
 
-        titulo = 'Datos de la contraración ' + item.id;
+        titulo = 'Datos de la contraración ' + item.id.toUpperCase();
 
     } else if (categoria == '/forma_pago/') {
 
@@ -231,7 +215,7 @@ function mostrarModal(categoria, item, disabled) {
 
     } else if (categoria == '/licencia/') {
 
-        titulo = 'Datos de la licencia ' + item.id;
+        titulo = 'Datos de la licencia ' + item.id.toUpperCase();
 
     } else if (categoria == '/provincia/') {
 
@@ -253,6 +237,12 @@ function mostrarModal(categoria, item, disabled) {
     modal += '</div>';
     modal += '<div class="modal-body">';
     modal += '<form class="form-horizontal" id="formularioModal">';
+
+    /*modal += '<div class="control-group">';
+     modal += '<div class="controls">';
+     modal += '<input type="hidden" id="id" placeholder="Id..." name="id" value="2">';
+     modal += '</div>';
+     modal += '</div>';*/
 
     for (var property in item) {
 
@@ -389,7 +379,7 @@ function insertModal(categoria) {
         modal += '<div class="control-group">';
         modal += '<label class="control-label" for="inputVia">Via</label>';
         modal += '<div class="controls">';
-        modal += '<select name="tipoVia">';
+        modal += '<select name="tipo_via">';
         modal += ' <option value="CALLE">Calle</option>';
         modal += ' <option value="PLAZA">Plaza</option>';
         modal += '<option value="AVENIDA">Avenida</option>';
@@ -425,7 +415,7 @@ function insertModal(categoria) {
         modal += '<div class="control-group">';
         modal += '<label class="control-label" for="" >Codigo postal</label>';
         modal += '<div class="controls">';
-        modal += '<input type="text" id="codigoPostal" placeholder="Codigo postal..." name="codigoPostal">';
+        modal += '<input type="text" id="codigoPostal" placeholder="Codigo postal..." name="codigo_postal">';
         modal += '</div>';
         modal += '</div>';
         modal += '<div class="control-group">';
@@ -443,13 +433,13 @@ function insertModal(categoria) {
         modal += '<div class="control-group">';
         modal += '<label class="control-label" for="" >Teléfono Fijo</label>';
         modal += '<div class="controls">';
-        modal += '<input type="text" id="telefonoFijo" placeholder="Teléfono Fijo..." name="telefonoFijo">';
+        modal += '<input type="text" id="telefonoFijo" placeholder="Teléfono Fijo..." name="telefono_fijo">';
         modal += '</div>';
         modal += '</div>';
         modal += '<div class="control-group">';
         modal += '<label class="control-label" for="" >Teléfono Movil</label>';
         modal += '<div class="controls">';
-        modal += '<input type="text" id="telefonoMovil" placeholder="Teléfono Movil..." name="telefonoMovil">';
+        modal += '<input type="text" id="telefonoMovil" placeholder="Teléfono Movil..." name="telefono_movil">';
         modal += '</div>';
         modal += '</div>';
         /* modal += '<div class="control-group">';
@@ -507,7 +497,7 @@ function insertModal(categoria) {
         modal += '<div class="control-group">';
         modal += '<label class="control-label" for="" >Forma Pago</label>';
         modal += '<div class="controls">';
-        modal += '<input type="text" id="forma_pago" placeholder="Forma Pago..." name="formaPago">';
+        modal += '<input type="text" id="forma_pago" placeholder="Forma Pago..." name="forma_pago">';
         modal += '</div>';
         modal += '</div>';
 
@@ -552,7 +542,7 @@ function insertModal(categoria) {
         modal += '<div class="control-group">';
         modal += '<label class="control-label" for="" >Tipo Via</label>';
         modal += '<div class="controls">';
-        modal += '<input type="text" id="tipo_via" placeholder="Tipo Via..." name="tipoVia">';
+        modal += '<input type="text" id="tipo_via" placeholder="Tipo Via..." name="tipo_via">';
         modal += '</div>';
         modal += '</div>';
 

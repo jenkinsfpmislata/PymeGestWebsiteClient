@@ -237,8 +237,8 @@ a {
 
 a:hover,
 a:focus {
-    color: white;
-    text-decoration: none;
+    color: #005580;
+    text-decoration: underline;
 }
 
 .img-rounded {
@@ -1267,8 +1267,8 @@ textarea::-webkit-input-placeholder {
     margin-left: -20px;
 }
 
-.textoColumnDerecha > .radio:first-child,
-.textoColumnDerecha > .checkbox:first-child {
+.controls > .radio:first-child,
+.controls > .checkbox:first-child {
     padding-top: 5px;
 }
 
@@ -1970,14 +1970,14 @@ legend + .control-group {
     text-align: right;
 }
 
-.form-horizontal .textoColumnDerecha {
+.form-horizontal .controls {
     *display: inline-block;
     *padding-left: 20px;
     margin-left: 180px;
     *margin-left: 0;
 }
 
-.form-horizontal .textoColumnDerecha:first-child {
+.form-horizontal .controls:first-child {
     *padding-left: 180px;
 }
 
